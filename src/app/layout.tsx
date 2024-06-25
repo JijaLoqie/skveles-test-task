@@ -1,4 +1,5 @@
 import "~/styles/globals.css";
+import { Header } from "~/widgets/header"
 
 import { GeistSans } from "geist/font/sans";
 
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
