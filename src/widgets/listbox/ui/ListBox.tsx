@@ -24,6 +24,7 @@ export function ListBox() {
         users.length > 0 ? (
           <>
             <Card user={users[0]} onRemove={() => { setUsers(was => was.slice(1)) }} />
+
             <div className="flex flex-col gap-4 overflow-y-auto p-4">
               {
                 users.slice(1).map((user) => (
