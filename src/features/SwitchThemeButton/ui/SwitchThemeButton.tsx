@@ -6,7 +6,6 @@ export function SwitchThemeButton() {
   const [darkMode, setDarkMode] = useState(true)
 
   useEffect(() => {
-    console.log('darkMode', darkMode)
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
