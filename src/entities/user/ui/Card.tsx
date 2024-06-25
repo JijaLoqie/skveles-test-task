@@ -2,11 +2,7 @@ import { RemoveUserButton } from "~/features/RemoveUserButton";
 import type { User } from "../lib/types";
 
 
-export function Card({ user }: { user?: User }) {
-  if (!user) {
-    return null
-  }
-
+export function Card({ user, onRemove }: { user: User, onRemove: () => void }) {
   const { id, name } = user
 
   return (
@@ -16,7 +12,7 @@ export function Card({ user }: { user?: User }) {
         <p>id: {id}</p>
         <p>name: {name}</p>
       </div>
-      <RemoveUserButton userId={id} />
+      <RemoveUserButton onRemove={onRemove} />
     </div>
   )
 }
