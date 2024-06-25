@@ -4,10 +4,9 @@ export function UserItem({ user }: { user: User }) {
   const { id, name } = user
 
   return (
-    <div>
-      <h1>UserItem</h1>
-      <p>id: {id}</p>
+    <div className="bg-white bg-opacity-30 rounded text-black p-4 flex justify-between">
       <p>name: {name}</p>
+      <p>id: {id}</p>
     </div>
   );
 }
