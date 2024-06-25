@@ -1,5 +1,5 @@
-import { Card, User } from "~/entities/user";
-import { UserItem } from "~/entities/user/ui/UserItem";
+import { Card, UserItem } from "~/entities/user";
+import type { User } from "~/entities/user/";
 
 
 const users: User[] = [
@@ -22,10 +22,13 @@ const users: User[] = [
 
 export function ListBox() {
   return (
-    <div>
-      <h1>ListBox</h1>
+    <div className="bg-white bg-opacity-10 p-4 h-5/6 w-1/3 rounded flex flex-col gap-4">
+      <h1 className="text-8xl">ListBox</h1>
+
+      <Card user={users[0]} />
+
       {
-        users.map((user) => (
+        users.slice(1).map((user) => (
           <UserItem key={user.id} user={user} />
         ))
       }
